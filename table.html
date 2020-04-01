@@ -4,29 +4,126 @@
 <head>
     <title>Tabela</title>
     <style>
+        body {
+            background-color: gainsboro;
+        }
+
         table {
-            font-family: arial, sans-serif;
-            border-collapse: collapse;
+            font-family: 'Calibri';
             width: 50%;
             margin: 0 auto;
+            color: gray;
         }
-        td, th {
-            border: 1px solid #dddddd;
+
+        td,
+        th {
             text-align: center;
-            padding: 12px 8px;
-        }        
+            padding: 12px;
+            width: 200px;
+        }
+
+        .cell-lime {
+            background-color: #62e562;
+            font-weight: bold;
+            font-size: 32px;
+            color: white;
+        }
+
+        .cell-royal {
+            background-color: #5e41e0;
+            font-weight: bold;
+            font-size: 32px;
+            color: white;
+        }
+
+        .cell-blue {
+            background-color: #476fff;
+            font-weight: bold;
+            font-size: 32px;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #eee;
+        }
+
+        tr:nth-child(odd) {
+            background: #fff;
+        }
+
         th:nth-child(1) {
-            color: lime;
+            color: #62e562;
         }
+
         th:nth-child(2) {
-            color: royalblue;
+            color: #5e41e0;
         }
+
         th:nth-child(3) {
-            color: blue;
+            color: #476fff;
         }
-        button{
+
+        button {
             border: 2px solid;
-            padding: 3px;
+            border-radius: 5px;
+            padding: 6px 12px;
+            background-color: #FFF;
+        }
+
+        table {
+            border-collapse: separate;
+            border-spacing: 5px 0;
+        }
+
+        .button-lima {
+            color: #62e562;
+            font-weight: 700;
+            padding: 8px 14px;
+        }
+
+        .button-royal {
+            color: #5e41e0;
+            font-weight: 700;
+            padding: 8px 14px;
+        }
+
+        .button-blue {
+            color: #476fff;
+            font-weight: 700;
+            padding: 8px 14px;
+        }
+
+        tr:last-child td:nth-child(1) {
+            border-bottom: 3px solid #62e562;
+            padding: 32px 8px;
+        }
+
+        tr:last-child td:nth-child(2) {
+            border-bottom: 3px solid #5e41e0;
+            padding: 32px 8px;
+        }
+
+        tr:last-child td:nth-child(3) {
+            border-bottom: 3px solid #476fff;
+            padding: 32px 8px;
+        }
+
+        tr:first-child th:nth-child(1) {
+            border-top: 3px solid #62e562;
+            padding: 25px 8px;
+            font-size: 28px;
+        }
+
+        tr:first-child th:nth-child(2) {
+            border-top: 3px solid #5e41e0;
+            padding: 25px 8px;
+            font-size: 28px;
+        }
+
+        tr:first-child th:nth-child(3) {
+            border-top: 3px solid #476fff;
+            padding: 25px 8px;
+            font-size: 28px;
         }
     </style>
 </head>
@@ -39,9 +136,9 @@
             <th>Premium</th>
         </tr>
         <tr>
-            <td>$99</td>
-            <td>$99</td>
-            <td>$99</td>
+            <td class="cell-lime">$99</td>
+            <td class="cell-royal">$99</td>
+            <td class="cell-blue">$99</td>
         </tr>
         <tr>
             <td>Option</td>
@@ -74,9 +171,9 @@
             <td>Option</td>
         </tr>
         <tr>
-            <td><button>Purchase</button></td>
-            <td><button>Purchase</button></td>
-            <td><button>Purchase</button></td>
+            <td><button class="button-lima">Purchase</button></td>
+            <td><button class="button-royal">Purchase</button></td>
+            <td><button class="button-blue">Purchase</button></td>
         </tr>
     </table>
 </body>
